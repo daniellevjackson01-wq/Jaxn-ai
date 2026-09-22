@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from pypdf import PdfReader
 from dotenv import load_dotenv
-
+BASE = Path(__file__).resolve().parent
 load_dotenv()
 (BASE / 'data').mkdir(exist_ok=True)
 DB_PATH = BASE / 'data' / 'jaxn.db'
