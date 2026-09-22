@@ -8,7 +8,7 @@ from pypdf import PdfReader
 from dotenv import load_dotenv
 
 load_dotenv()
-BASE = Path(__file__).resolve().parent
+(BASE / 'data').mkdir(exist_ok=True)
 DB_PATH = BASE / 'data' / 'jaxn.db'
 UPLOAD_DIR = BASE / 'uploads'
 UPLOAD_DIR.mkdir(exist_ok=True)
